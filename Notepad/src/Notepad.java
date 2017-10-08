@@ -96,7 +96,7 @@ public class Notepad {
 			if (fileChooser.showOpenDialog(null)==JFileChooser.APPROVE_OPTION) {
 				File file = fileChooser.getSelectedFile();
 				try {
-					textArea.setText("");
+					textArea.setText(" ");
 					Scanner scanner = new Scanner(file);
 					while(scanner.hasNext()) {
 						textArea.append(scanner.nextLine() + "\n");
@@ -154,7 +154,7 @@ public class Notepad {
 	private class ClearListener implements ActionListener{
 	    @Override
 	    public void actionPerformed(ActionEvent e) {
-	        textArea.setText("");
+	        textArea.setText(" ");
 	    }
 	}
 }
